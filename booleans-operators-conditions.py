@@ -27,20 +27,37 @@ else:
 
 #CHECK DIVISIBILTY OF NUMBER BY 3 AND 5
 
-# Working of Multiple If conditions
-
-
-
-
-#If-Elif-Else
-
 number=int(input('Enter a number to check if it is divisible by both 3 and 5: '))
-
 n3=number%3==0
-n5=number%3==0
+n5=number%5==0
+
+# Working of Multiple If conditions                                 # - evaluates all the if conditions and shows the output of all the satisfied conditions
+if(n3==True):
+    print(number,' is divisible by 3')
+if(n5==True):
+    print(number,' is divisible by 5')
+if(n3==True and n5==False):
+    print(number,' is divisible by 3 but not by 5')
+if(n3==False and n5==True):
+    print(number,' is divisible by 5 but not by 3')
+if(n3==True and n5==True):
+    print(number,' is divisible by both 3 and 5')
+else:
+    print(number,' is not divisible by both 3 and 5') 
+
+
+#If-Elif-Else                                                       # - Evaluates and gives the output of one satisfied condition
+print('if-elif')
 
 if(n3==True and n5==True):
     print(number,' is divisible by both 3 & 5')
+elif(n3==True and n5==False):
+    print(number,' is divisible by 3 but not by 5')
+elif(n3==False and n5==True):
+    print(number,' is divisible by 5 but not by 3')
 else:
-    print(number,' is not divisible by both 3 & 5')
+    print(number,' is not divisible by both 3 and 5')
 
+
+#Nested conditions
+#    
