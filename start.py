@@ -1,3 +1,5 @@
+# print command, variable, operators, datatype, next line, tab
+
 print("Hello, I've begun")
 a=2
 b=6
