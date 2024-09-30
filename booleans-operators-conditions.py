@@ -20,9 +20,9 @@ DataType_Result=number%2==0                                        # % - modulus
 print(DataType_Result)
 
 if(str(DataType_Result)=='True'):                                  # str converts the data type to string
-    print('It is a even number')
+    print('It is an even number')
 else:
-    print('It is a odd number')
+    print('It is an odd number')
 
 
 #CHECK DIVISIBILTY OF NUMBER BY 3 AND 5
@@ -58,6 +58,26 @@ elif(n3==False and n5==True):
 else:
     print(number,' is not divisible by both 3 and 5')
 
+# CHECK IF A NUMBER IS ZERO, IF NOT STATE IF IT IS POSITIVE(ODD OR EVEN) OR NEGATIVE(ODD OR EVEN)
 
 #Nested conditions
-#    
+
+print('nested conditions')
+
+if(number!=0):
+    if(number%2==0):
+        if(number>0):
+#            print('{} is a positive odd number').__format__(str(number))       # format does not accept any other data type other than string and does not take any keyword arguements
+             print(number,' is a positive odd number')
+        else:
+            print(number,' is a positive odd number')
+
+        
+    else:
+        if(number<0):
+            print(number,' is a negative even number')
+        else:
+            print(number,' is a negative odd number')
+else:
+    print('the number is ',number)
+
