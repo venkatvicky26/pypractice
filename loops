@@ -1,0 +1,109 @@
+# for Loops
+
+for i in 'apple':
+    print(i)
+
+
+for i in range(0,11,2):
+    print(i) 
+
+# Logic to print multiplication table for a range
+
+a=int(input('enter the number for multiplication table: '))
+b=int(input('enter the range value: ')) 
+for i in range(1,b+1,1):
+    print(i,'*',a,'=',i*a)
+
+
+# Print number of odd and even numbers between a and b
+start=int(input('enter a minimum number: '))
+end=int(input('enter a  maximum number: ')) 
+a=0
+b=0
+for i in range(start,end+1,1):
+    if(i%2==0):
+        a+=1
+    else:
+        b+=1
+a=str(a); b=str(b)
+print('No of odd numbers {1} \n No of even numbers {0}'.format(a,b))
+
+
+# get multiple integer inputs, find sum and avg of them
+
+list=[]
+sum=0
+avg=0
+a=int(input("Enter number of values to be stored: "))
+for i in range(1,a+1):
+    b=int(input("Enter number {}: ".format(str(i))))
+    list.append(b)
+    sum=sum+b
+    avg=avg+b
+print('list: {0} \nsum: {1} \navg: {2}'.format(list,sum,int(avg/a)))
+
+
+# Nested for loops
+
+for i in range(1,6):
+#    print('*')
+    for j in range(1,i+1):
+#    list1.append('*')                                # append to a list and print each row for every append
+        print('*',end='')
+    print()
+
+
+# check if the input number is prime
+
+# while 
+
+n=int(input('Enter a number to check if it is prime: '))
+i=2
+while i < n:
+    if(n%i==0):
+        print('{} is divisible by {}. Hence, '.format(n,i),'it is not a prime number.')
+        break
+    else:
+        i+=1
+else:
+    print(n,' is  a prime number.')
+
+# Prime number if not prompt for factors
+n=int(input('Enter a number to check if it is prime: '))
+i=2
+C='N'
+factors=[]
+while i < n:
+    if C=='N':
+        if(n%i==0):
+            print('{} is divisible by {}. Hence, '.format(n,i),'it is not a prime number.')
+            c=input('Do you want the number of factors of {}? Y/N? '.format(n))
+            if c=='y' or c=='Y':
+                C='Y'; factors=[i]
+            else:
+                break
+        i+=1
+    else:
+        if(n%i==0):
+            factors.append(i)
+            i+=1 
+        else:
+            i+=1
+            continue            
+else:
+    if len(factors)<1:
+        print(n,' is  a prime number.')
+    else:
+        print(factors)
+        
+
+
+# find the factorial of a number
+
+m=int(input("Enter a number to find it's factorial: "))
+i=m
+while i>1:
+    i-=1
+    m=m*i
+print(m)
+
