@@ -15,14 +15,17 @@ print(s[1])
 # lists - all the items in a list not necessary to be of same data type, lists are mutable
 
 list = [1,2,3.0,'four']
-list[0]=1.0
-print(list[0])
+list[0]=1.0         # This replaces the value in the particular index
+print(list[0])      
+list.insert(2,2.5)  # This inserts a new value in the particular index
 print(list[3:1:-1])
-list.insert(2,2.5)
+
 print(list)
 print(list.count('four'))
 print(list.index('four'))
 print(list.pop(0))
+print(list.remove('four'))
+print(list)
 #print(list.sort())
-#print(list.remove())
+
 
